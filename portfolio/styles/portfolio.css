@@ -1,0 +1,143 @@
+body, html {
+  background-color: rgb(255,255,255);
+  font-face: Helvetica;
+  height: 100%;
+}
+
+#main {
+  padding: 8% 5% 5% 5%;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-shadown: 1px 1px 1px rgba(0,0,0,0.004);
+  margin: 0;
+  font-size: 1em;
+}
+
+h3 {
+  color: white;
+  margin: 0px 5px 5px 5px;
+  font-face:  Verdana;
+  font-size: 2em;
+}
+
+h4 {
+  color: white;
+  margin: 3px 5px 5px 5px;
+  font-face:  Verdana;
+  font-size: 1.5em;
+}
+
+#main {
+  color: black;
+}
+
+#main h4 {
+  color: black;
+}
+
+#contact {
+  margin: 20px 0px 60px 0px;
+  color: black;
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+#contact h4 {
+  color: black;
+}
+
+#portfolio {
+  margin: 0px 0 30px 0;
+}
+
+.portfolio-img {
+  box-shadow: 5px 5px 10px #888888;
+}
+
+#about {
+  color: black;
+  margin: 0px 0 30px 0;
+}
+
+#about h3 {
+  color: black;
+}
+
+#about-text {
+  background-color: rgba(0,0,0,0.05);
+  margin: 60px 10px 0 50px;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#top {
+  background-color: white;
+  margin:  0px 0px 0px 0px;
+  position: fixed;
+  width: 100%;
+  height: 35px;
+  z-index: 1;
+}
+
+#head {
+  background-color: rgb(10,10,10);
+  margin:  2% 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  z-index: 2;
+}
+
+#foot {
+  background-color: rgb(10,10,10);
+  padding: 5px 5px 5px 5px;
+  margin: -2% 0 0 0;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  z-index: 2;
+}
+
+#bottom {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+}
+
+a:clicked {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#head a {
+  color: white;
+  text-decoration:  none;
+}
+
+
+#foot a {
+  color: white;
+  text-decoration:  none;
+}
+
+#about-text hr {
+  margin-top: 20px;
+  margin-bottom: 20p;
+}
+
+hr {
+  max-width: 50px;
+  margin-top: 30px;
+  border-color: #72E1D1;
+  border-width: 3px;
+}
+
+.clip-css {
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
