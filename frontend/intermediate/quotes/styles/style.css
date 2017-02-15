@@ -12,8 +12,9 @@ div {
 
 body {
   background-color: #333;
+  text-shadow: 2px 2px #333;
   color: white;
-  padding: 5% 5% 5% 5%;
+  padding: 5%;
   font-family: 'Libre Baskerville', sans-serif; }
   body a {
     text-decoration: none;
@@ -21,44 +22,48 @@ body {
 
 .quote-box {
   position: relative;
-  margin: auto auto auto auto;
+  margin: auto;
   height: 70%;
   width: 90%; }
+  .quote-box#quotation {
+    padding-left: 5%;
+    padding-top: 8px; }
+  .quote-box#at {
+    padding-right: 5%;
+    padding-top: 8px; }
 
 .button {
-  text-shadow: 2px 2px #333;
   text-align: left;
-  position: relative;
-  font-size: 3em; }
+  font-size: 3em;
+  padding-right: 2%; }
+  .button:hover {
+    opacity: 0.9; }
   .button#tweet-quote {
-    float: left;
-    padding: 0px;
-    padding-top: 8px;
-    text-align: center;
-    margin-right: 5px; }
-  .button#new-quote {
     float: right; }
+  .button#new-quote {
+    float: left; }
 
 .quote-author {
-  text-shadow: 1px 1px #333;
-  font-size: 3em;
-  font-weight: 200;
-  padding: 2% 2% 2% 2%;
-  text-align: right;
+  font-size: 2em;
+  font-weight: 100;
+  padding: 2%;
+  margin-left: 45%;
+  margin-top: 2%;
+  text-align: left;
   font-family: 'Libre Baskerville';
   font-style: italic; }
 
 .quote-text {
-  text-shadow: 2px 2px #333;
+  padding: 5%;
   text-align: center;
-  font-size: 4.5em;
+  font-size: 4em;
   font-weight: bolder; }
 
 .footer {
   width: 450px;
   text-align: center;
   display: block;
-  margin: 15px auto 30px auto;
+  margin: 15px auto 30px;
   font-size: 0.8em; }
 
 /*# sourceMappingURL=style.css.map */

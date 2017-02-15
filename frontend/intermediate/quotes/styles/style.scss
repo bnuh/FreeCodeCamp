@@ -2,73 +2,88 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,500);
 
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
 }
+
 div {
-  position:relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 body {
-  background-color: #333;
-  color: white;
-  padding: 5% 5% 5% 5%;
-  font-family: 'Libre Baskerville', sans-serif;
-  a {
-    text-decoration: none;
+    background-color: #333;
+    text-shadow: 2px 2px #333;
     color: white;
-  }
+    padding: 5%;
+    font-family: 'Libre Baskerville', sans-serif;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .quote-box {
-  position:relative;
-  margin: auto auto auto auto;
-  height: 70%;
-  width: 90%;
+    position: relative;
+    margin: auto;
+    height: 70%;
+    width: 90%;
+
+    &#quotation {
+        padding-left: 5%;
+        padding-top: 8px;
+    }
+
+    &#at {
+        padding-right: 5%;
+        padding-top: 8px;
+    }
 }
 
 .button {
-  text-shadow: 2px 2px #333;
-  text-align: left;
-  position: relative;
-  font-size: 3em;
-  &#tweet-quote, {
-    float:left;
-    padding:0px;
-    padding-top:8px;
-    text-align:center;
-    margin-right:5px;
-  }
-  &#new-quote {
-    float:right;
-  }
+    text-align: left;
+    font-size: 3em;
+    padding-right: 2%;
+
+    &:hover {
+        opacity:0.9;
+      }
+
+    &#tweet-quote {
+        float: right;
+    }
+
+    &#new-quote {
+        float: left;
+    }
+
 }
 
 .quote-author {
-  text-shadow: 1px 1px #333;
-  font-size:3em;
-  font-weight:200;
-  padding: 2% 2% 2% 2%;
-  text-align: right;
-  font-family: 'Libre Baskerville';
-  font-style: italic;
+    font-size: 2em;
+    font-weight: 100;
+    padding: 2%;
+    margin-left: 45%;
+    margin-top: 2%;
+    text-align: left;
+    font-family: 'Libre Baskerville';
+    font-style: italic;
 }
 
 .quote-text {
-  text-shadow: 2px 2px #333;
-  text-align:center;
-  font-size:4.5em;
-  font-weight:bolder;
+    padding: 5%;
+    text-align: center;
+    font-size: 4em;
+    font-weight: bolder;
 }
 
 .footer {
-  width:450px;
-  text-align:center;
-  display:block;
-  margin:15px auto 30px auto;
-  font-size:0.8em;
-
+    width: 450px;
+    text-align: center;
+    display: block;
+    margin: 15px auto 30px;
+    font-size: 0.8em;
 }
