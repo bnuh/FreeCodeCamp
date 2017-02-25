@@ -8,3 +8,7 @@ html, body {
     font-family: 'Roboto', sans-serif;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(201, 201, 201)), to(rgb(143, 143, 143)));
 }
+
+a {
+    text-decoration: none;
+}
