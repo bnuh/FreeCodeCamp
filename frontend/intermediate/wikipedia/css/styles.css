@@ -4,11 +4,21 @@ html, body {
     color: white;
     width: 100%;
     height: 100%;
+    text-align: center;
     position: fixed;
     font-family: 'Roboto', sans-serif;
+    font-size: 50px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(201, 201, 201)), to(rgb(143, 143, 143)));
 }
 
-a {
+a:link {
     text-decoration: none;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
 }
