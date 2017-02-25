@@ -4,10 +4,6 @@ html, body {
     height: 100%;
     position: fixed;
     font-family: 'Libre Baskerville', sans-serif;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(175, 102, 34)), to(rgb(237, 108, 36)));
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(170, 165, 51)), to(rgb(175, 120, 15)));
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(198, 131, 18)), to(rgb(163, 233, 107)));
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(5, 136, 177)), to(rgb(15, 169, 255)));
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(201, 201, 201)), to(rgb(143, 143, 143)));
 }
 
