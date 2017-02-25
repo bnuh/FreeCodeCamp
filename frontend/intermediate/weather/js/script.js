@@ -15,7 +15,63 @@ $(document).ready(function() {
     }).done(function(json) {
         $.getJSON(url, function(json) {
             store = json;
-            $("#weather-icon").attr('class', 'wi wi-day-cloudy');
+            if (json.weather[0].icon == "01d") {
+                    $("#weather-icon").attr('class', 'wi wi-day-sunny');
+                }
+                else if (json.weather[0].icon == "01n") {
+                    $("#weather-icon").attr('class', 'wi wi-night-clear');
+                }
+                else if (json.weather[0].icon == "02d") {
+                    $("#weather-icon").attr('class', 'wi wi-day-cloudy');
+                }
+                else if (json.weather[0].icon == "02n") {
+                    $("#weather-icon").attr('class', 'wi wi-night-alt-cloudy');
+                }
+                else if (json.weather[0].icon == "03d") {
+                    $("#weather-icon").attr('class', 'wi wi-day-cloudy-high');
+                }
+                else if (json.weather[0].icon == "03n") {
+                    $("#weather-icon").attr('class', 'wi wi-night-alt-cloudy');
+                }
+                else if (json.weather[0].icon == "04d") {
+                    $("#weather-icon").attr('class', 'wi wi-cloudy');
+                }
+                else if (json.weather[0].icon == "04n") {
+                    $("#weather-icon").attr('class', 'wi wi-cloudy');
+                }
+                else if (json.weather[0].icon == "09d") {
+                    $("#weather-icon").attr('class', 'wi wi-day-showers');
+                }
+                else if (json.weather[0].icon == "09n") {
+                    $("#weather-icon").attr('class', 'wi wi-night-alt-sprinkle');
+                }
+                else if (json.weather[0].icon == "10d") {
+                    $("#weather-icon").attr('class', 'wi wi-day-rain');
+                }
+                else if (json.weather[0].icon == "10n") {
+                    $("#weather-icon").attr('class', 'wi wi-night-rain');
+                }
+                else if (json.weather[0].icon == "11d") {
+                    $("#weather-icon").attr('class', 'wi wi-day-thunderstorm');
+                }
+                else if (json.weather[0].icon == "11n") {
+                    $("#weather-icon").attr('class', 'wi wi-night-thunderstorm');
+                }
+                else if (json.weather[0].icon == "13d") {
+                    $("#weather-icon").attr('class', 'wi wi-day-snow');
+                }
+                else if (json.weather[0].icon == "13n") {
+                    $("#weather-icon").attr('class', 'wi wi-night-alt-snow');
+                }
+                else if (json.weather[0].icon == "50d") {
+                    $("#weather-icon").attr('class', 'wi wi-fog');
+                }
+                else if (json.weather[0].icon == "50n") {
+                    $("#weather-icon").attr('class', 'wi wi-fog');
+                }
+                else {
+                    $("#weather-icon").attr('class', 'wi wi-na');
+                };
             $(".description").html(json.weather[0].description.toUpperCase());
             $(".temp").html(Math.round(json.main.temp - 273) + "°C");
             if (json.main.temp >= 293){
