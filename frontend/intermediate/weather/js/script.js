@@ -4,7 +4,6 @@ var store;
 
 $(document).ready(function() {
     $.getJSON("http://freegeoip.net/json/", function(data) {
-        console.log(data);
         var loc = data.city.toUpperCase() + ", " + data.region_code.toUpperCase();
         $(".header").html(loc);
         url = base + data.city + api;
