@@ -41,3 +41,21 @@ html, body {
 .description {
 
 }
+
+.icon {
+    font: bold 15px Sans-Serif;
+    color: white;
+    text-align: center;
+}
+
+.temp {
+    font: bold 15px Sans-Serif;
+    color: white;
+    text-align: center;
+}
+
+.description {
+    font: bold 15px Sans-Serif;
+    color: white;
+    text-align: center;
+}
