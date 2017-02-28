@@ -4,6 +4,13 @@ $(document).ready(function() {
             var suff = "&callback=?";
             $.getJSON((api + suff),
                 function(json) {
-                    console.log(json);
+                  var arr = [], len;
+                  for(key in json.query.pages) {
+                      arr.push(key);
+                  }
+                  len = arr.length;
+                  for (var i = 0; i < len; i++){
+                    console.log(json.query.pages[arr[i]].title);
+                  }
                 });
         });
