@@ -22,3 +22,51 @@ a:link {
     margin-right: -50%;
     transform: translate(-50%, -50%) }
 }
+
+.result {
+
+}
+
+.search-query {
+  color:black;
+}
+
+#logo {
+  padding: 25px 25px 25px 25px;
+}
+
+#back-1
+{
+border-radius: 50%;
+top: 35%;
+left: 15%;
+width: 70%;
+height: auto;
+padding-top: 70%;
+background: rgba(0, 0, 0, 0.05);
+position: absolute;
+}
+
+#back-2
+{
+border-radius: 50%;
+top: 15%;
+right: 45%;
+width: 70%;
+height: auto;
+padding-top: 70%;
+background: rgba(0, 0, 0, 0.05);
+position: absolute;
+}
+
+#back-3
+{
+border-radius: 50%;
+top: -5%;
+left: 45%;
+width: 50%;
+height: auto;
+padding-top: 50%;
+background: rgba(0, 0, 0, 0.05);
+position: absolute;
+}
