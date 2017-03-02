@@ -36,7 +36,9 @@ a:link {
 
 #result {
   margin-top: 40%;
-  margin-left: 5%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  margin-left: 50%;
   position: absolute;
 }
 
