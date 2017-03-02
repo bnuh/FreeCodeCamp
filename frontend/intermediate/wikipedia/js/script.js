@@ -37,7 +37,7 @@ $(document).ready(function() {
                 }
                 len = arr.length;
                 for (var i = 0; i < len; i++) {
-                  $('#results').append("<li><h1><a href='" + json.query.pages[arr[i]].url + "'>"+ json.query.pages[arr[i]].title + "</h1><p>" + json.query.pages[arr[i]].extract + "</a></p></li>");
+                  $('#results').append("<li><h1><a href='" + json.query.pages[arr[i]].fullurl + "'>"+ json.query.pages[arr[i]].title + "</h1><p>" + json.query.pages[arr[i]].extract + "</a></p></li>");
                 }
             });
     });
