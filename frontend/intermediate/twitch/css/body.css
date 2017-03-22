@@ -1,5 +1,13 @@
-html, body {
-    background-color: rgb(18, 5, 2);
+html {
+    background-image: url('../image/back.jpg');
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background-color: rgba(18, 5, 2, 0.85);
+    padding: 0px;
+    margin: 0px;
     position: relative;
     height: 100%;
 }
