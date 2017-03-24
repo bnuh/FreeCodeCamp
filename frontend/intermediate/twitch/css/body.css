@@ -4,24 +4,45 @@ html, body {
 
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 
 .main {
-    text-align: center;
-    margin-top: 1%;
-    padding: 1%;
-    background-color: white;
-    box-shadow: 5px 5px 5px rbga(0,0,0,0.5);
-}
-
-#title {
     margin-top: 1%;
     margin-bottom: 1%;
-    font-size: 3em;
+    padding: 1%;
+}
+
+.title {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    background-color: white;
 }
 
 .streams {
+    margin-top: 1%;
+    margin-bottom: 1%;
     background-color: white;
+}
+
+.stream {
+    background-color: white;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.status {
+
+}
+
+.summary {
+    
 }
 
 .sides {
