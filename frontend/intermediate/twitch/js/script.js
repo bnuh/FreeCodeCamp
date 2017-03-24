@@ -7,6 +7,9 @@ users.sort().forEach(function(user) {
                       if (data.stream != null){
                           $('.streams').append("<li><img class='logo' src=" + data.stream.channel.logo + "></li>");
                       }
+                      else {
+                          $('.streams').append("<li><img class='logo' src='https://dummyimage.com/100x100/98c4f0/ffffff.jpg&text=Offline'></li>");
+                      }
                   });
                 });
             });
