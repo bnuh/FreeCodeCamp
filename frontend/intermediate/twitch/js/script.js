@@ -4,7 +4,9 @@ users.sort().forEach(function(user) {
             $(document).ready(function() {
                   $.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data) {
                       console.log(data);
-                      $('.streams').append("<li><img class='logo' src=" + data.stream.channel.logo + "></li>");
+                      if (data.stream != null){
+                          $('.streams').append("<li><img class='logo' src=" + data.stream.channel.logo + "></li>");
+                      }
                   });
                 });
             });
