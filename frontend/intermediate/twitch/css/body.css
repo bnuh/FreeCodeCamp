@@ -1,72 +1,29 @@
-html {
-    background-image: url('../image/back.jpg');
-    position: relative;
-    height: 100%;
+html, body {
+    background-color: rgb(193, 207, 232);
 }
 
-body {
-    background-color: rgba(18, 5, 2, 0.85);
-    position: absolute;
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
-    width: 100%;
-}
+ul {
+    list-style-type: none;
+  }
 
-h2 {
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  margin-top: 10px;
-}
-
-p {
-  margin: auto;
-  color: white;
-}
-
-#title-back {
-    background-color: rgb(180, 67, 40);
-    position: relative;
-    top: 8%;
-    left: 1%;
-    height: auto;
-    width: 32%;
-    padding: 2px;
-    box-shadow: 10px 5px 5px rgba(0,0,0, 0.85);
+.main {
+    text-align: center;
+    margin-top: 1%;
+    padding: 1%;
+    background-color: white;
+    box-shadow: 5px 5px 5px rbga(0,0,0,0.5);
 }
 
 #title {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: rgb(105, 34, 16);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 3em;
 }
 
-#block {
-    background-color: rgb(180, 67, 40);
-    position: relative;
-    top: 10%;
-    left: 1%;
-    height: auto;
-    width: 32%;
-    padding: 2px;
-    box-shadow: 10px 5px 5px rgba(0,0,0, 0.85);
+.streams {
+    background-color: white;
 }
 
-#results {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding-left: 4%;
-    background-color: rgb(105, 34, 16);
-}
-
-#player {
-    position: relative;
-    margin-top: auto;
-    left: 35%;
-    width: 100%;
-    height: 75%;
-    background-color: rgba(18, 5, 2, 0.25);
+.sides {
+    height: 100%;
 }
