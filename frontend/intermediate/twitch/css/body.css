@@ -32,17 +32,30 @@ ul {
     background-color: white;
 }
 
+.streamers {
+
+}
+
+.streamer {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: white;
+}
+
 .logo {
     height: 100px;
     width: 100px;
+    padding: 5px;
+    margin-left: -15px;
 }
 
 .status {
-
+    text-align: center;
+    margin-top: 1.5%;
 }
 
 .summary {
-    
+
 }
 
 .sides {
