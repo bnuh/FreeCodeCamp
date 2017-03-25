@@ -50,12 +50,16 @@ ul {
 }
 
 .status {
-    text-align: center;
-    margin-top: 1.5%;
+
+}
+
+.name {
+
 }
 
 .summary {
-
+    text-align: center;
+    margin-top: 1.5%;
 }
 
 .sides {
