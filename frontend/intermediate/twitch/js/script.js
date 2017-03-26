@@ -16,8 +16,8 @@ $(document).ready(function() {
                 name = str.stream.channel.display_name;
                 url = str.stream.channel.url;
                 html = "<div class='row streamer'><div class='col-lg-2 col-md-2 col-sm-2 col-xs-2'><img class='logo' src=" +
-                logo + "></div><div class='summary col-lg-10 col-md-8 col-sm-8 col-xs-10'><div class='row name'><a href='" +
-                url + "'>" + name + "</a></div><div class=row status'>" + status + "</div><div class='row game'>" + game +
+                logo + "></div><div class='summary col-lg-10 col-md-8 col-sm-8 col-xs-10'><div class='row name'><a href='http://www.twitch.tv/" +
+                user + "'>" + name + "</a></div><div class=row status'>" + status + "</div><div class='row game'>" + game +
                 "</div></div></div>";
                 $('.streamers').prepend(html);
             } else {
@@ -25,10 +25,9 @@ $(document).ready(function() {
                 logo = 'https://dummyimage.com/100x100/c1cfe8/ffffff&text=OFFLINE';
                 game = "";
                 name = user;
-                url = str.stream.channel.url;
                 html = "<div class='row streamer'><div class='col-lg-2 col-md-2 col-sm-2 col-xs-2'><img class='logo' src=" +
-                logo + "></div><div class='summary col-lg-10 col-md-8 col-sm-8 col-xs-10'><div class='row name'><a href='" +
-                url + "'>" + name + "</a></div><div class=row status'>" + status + "</div><div class='row game'>" + game +
+                logo + "></div><div class='summary col-lg-10 col-md-8 col-sm-8 col-xs-10'><div class='row name'><a href='http://www.twitch.tv/" +
+                user + "'>" + name + "</a></div><div class=row status'>" + status + "</div><div class='row game'>" + game +
                 "</div></div></div>";
                 $('.streamers').append(html);
             }
