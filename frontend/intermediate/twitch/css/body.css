@@ -25,18 +25,16 @@ ul {
 .streams {
     margin-top: 1%;
     margin-bottom: 1%;
-    background-color: white;
 }
 
 .stream {
-    background-color: white;
 }
 
 .streamers {
-
 }
 
 .streamer {
+    display: block;
     margin-top: 1%;
     margin-bottom: 1%;
     background-color: white;
