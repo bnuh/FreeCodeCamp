@@ -4,20 +4,32 @@
 // object has to be present in the object from the collection if it is to be
 // included in the returned array.
 
-//For example, if the first argument is [{ first: "Romeo", last: "Montague" },
+// For example, if the first argument is [{ first: "Romeo", last: "Montague" },
 // { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }],
 // and the second argument is { last: "Capulet" }, then you must return the
 // third object from the array (the first argument), because it contains the
 // property and its value, that was passed on as the second argument.
 
 function whatIsInAName(collection, source) {
-  // What's in a name?
-  var arr = [];
-  // Only change code below this line
-
-
-  // Only change code above this line
-  return arr;
+    // What's in a name?
+    var arr = [];
+    // Only change code below this line
+    for (var k = 0; k < (Object.keys(source)).length; k++){
+      for (var i = 0; i < collection.length; i++) {
+          if(collection[i].hasOwnProperty((Object.keys(source))[k])){
+            for (var j = 0; j < Object.values(collection[i]).length; j++){
+              if (Object.values(collection[i])[j] == (((Object.values(source))[k]))){
+                arr.push(collection[i]);
+              }
+            }
+          }
+        }
+      }
+//    console.log(arr);
+    return arr;
 }
 
+
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 });
+whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 });
