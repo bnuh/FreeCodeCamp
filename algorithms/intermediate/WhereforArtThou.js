@@ -11,20 +11,19 @@
 // property and its value, that was passed on as the second argument.
 
 function whatIsInAName(collection, source) {
-    // What's in a name?
-    var arr = [];
-    // Only change code below this linec
-      for (var i in collection) {
-        for (var j in Object.values(source)){
-          if (collection[i].hasOwnProperty(Object.keys(source)[j].toString())){
-            
-          }
-      }
-  }
-  return arr;
-}
 
+var srcKeys = Object.keys(source);
+console.log(srcKeys);
+return collection.filter(function (obj) {
+  for(var i = 0; i < srcKeys.length; i++) {
+    if(!obj.hasOwnProperty(srcKeys[i]) || obj[srcKeys[i]] !== source[srcKeys[i]]) {
+      return false;
+    }
+  }
+    return true;
+  });
+}
 
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 });
-whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 });
+whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 })
