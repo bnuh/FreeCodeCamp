@@ -13,20 +13,15 @@
 function whatIsInAName(collection, source) {
     // What's in a name?
     var arr = [];
-    // Only change code below this line
-    for (var k = 0; k < (Object.keys(source)).length; k++){
-      for (var i = 0; i < collection.length; i++) {
-          if(collection[i].hasOwnProperty((Object.keys(source))[k])){
-            for (var j = 0; j < Object.values(collection[i]).length; j++){
-              if (Object.values(collection[i])[j] == (((Object.values(source))[k]))){
-                arr.push(collection[i]);
-              }
-            }
+    // Only change code below this linec
+      for (var i in collection) {
+        for (var j in Object.values(source)){
+          if (collection[i].hasOwnProperty(Object.keys(source)[j].toString())){
+            
           }
-        }
       }
-//    console.log(arr);
-    return arr;
+  }
+  return arr;
 }
 
 
