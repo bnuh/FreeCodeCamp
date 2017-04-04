@@ -10,7 +10,7 @@ function fearNotLetter(str) {
     i++
     if (i == str.length) {
       return undefined;
-    };
+    });
   };
   return alph[index + i];
 }
