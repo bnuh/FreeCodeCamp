@@ -3,14 +3,23 @@
 //If all letters are present in the range, return undefined.
 
 function fearNotLetter(str) {
-  
-  return str;
+  var alph = "abcdefghijklmnopqrstuvwxyz";
+  var index = alph.indexOf(str[0]);
+  var i = 0;
+  while (str[i] == alph[index + i]){
+    i++
+    if (i == str.length) {
+      return undefined;
+    };
+  };
+  return alph[index + i];
 }
 
-fearNotLetter("abce");
-fearNotLetter("abcdefghjklmno");
+
+//fearNotLetter("abce");
+console.log(fearNotLetter("abcdefghjklmno"));
 // should return "i".
-fearNotLetter("bcd");
+// fearNotLetter("bcd");
 // should return undefined.
-fearNotLetter("yz");
+// fearNotLetter("yz");
 // should return undefined.
