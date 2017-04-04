@@ -13,12 +13,11 @@ function myReplace(str, before, after) {
           console.log(!(/[A-Z]/.test(after[i][0])));
           after = after[0].toUpperCase() + after.slice(1);
         }
-      };
+      }
       array[i] = after;
     }
   }
   str = array.join(' ');
-  console.log(str)
   return str;
 }
 
