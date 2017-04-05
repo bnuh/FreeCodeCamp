@@ -6,8 +6,9 @@
 // array should not be sorted in numerical order.
 // Check the assertion tests for examples.
 
-function uniteUnique(arr1, arr2, arr3, arr4) {
+function uniteUnique(arr1, arr2, arr3) {
   var newArr = [];
+  // for (var i in arguments.length){}
   for (var i in arr1){
     if (newArr.indexOf(arr1[i]) == -1){
       newArr.push(arr1[i]);
@@ -28,7 +29,6 @@ function uniteUnique(arr1, arr2, arr3, arr4) {
       newArr.push(arr4[i]);
     }
   }
-  console.log(newArr);
   return newArr;
 }
 
