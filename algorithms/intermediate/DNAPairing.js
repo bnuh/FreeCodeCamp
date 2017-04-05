@@ -7,13 +7,20 @@
 //and all the arrays are grouped into one encapsulating array.
 
 function pairElement(str) {
-  return str;
+  var el = ["A","C","G","T"];
+  var pair = ["T","G","C","A"];
+  var final = [];
+  var arr = str.split("");
+  for (var i in arr){
+    var newArr = [];
+    newArr.push(arr[i]);
+    newArr.push(pair[el.indexOf(arr[i])]);
+    final.push(newArr);
+  }
+  return final;
 }
 
-pairElement("GCG");
-pairElement("ATCGA");
+//pairElement("ATCGA");
 // should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]].
 pairElement("TTGAG");
 // should return [["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]].
-pairElement("CTCTA");
-// should return [["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]].
