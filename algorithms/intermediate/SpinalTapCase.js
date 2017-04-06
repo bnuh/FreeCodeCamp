@@ -1,8 +1,13 @@
 // Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
 
 function spinalCase(str) {
-  // "It's such a fine line between stupid, and clever."
-  // --David St. Hubbins
+  function upperToHyphenLower(match, offset, string) {
+    return (offset ? '-' : '') + match.toLowerCase();
+  }
+  str = str.replace(/[A-Z]/g, upperToHyphenLower);
+  str = str.replace(/ -/g, '-');
+  str = str.replace(/ /g, '-');
+  str = str.replace(/_/g, '');
   return str;
 }
 
