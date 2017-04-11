@@ -11,7 +11,6 @@ function convertHTML(str) {
   return str;
 }
 
-convertHTML("Dolce & Gabbana");
 convertHTML("Hamburgers < Pizza < Tacos");
 // should return Hamburgers &​lt; Pizza &​lt; Tacos.
 convertHTML("Sixty > twelve");
