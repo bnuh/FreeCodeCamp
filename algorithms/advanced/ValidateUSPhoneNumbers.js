@@ -18,6 +18,7 @@ function telephoneCheck(str) {
   return true;
 }
 
+
 telephoneCheck("555-555-5555");
 // should return a boolean.
 telephoneCheck("1 555-555-5555");
