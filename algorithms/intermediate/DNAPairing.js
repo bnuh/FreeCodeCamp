@@ -22,5 +22,6 @@ function pairElement(str) {
 
 //pairElement("ATCGA");
 // should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]].
-pairElement("TTGAG");
+console.log(pairElement("TTGAG"));
+console.log("test");
 // should return [["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]].
