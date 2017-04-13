@@ -18,8 +18,8 @@ function telephoneCheck(str) {
   // Remove dashes, underscores, spaces
   console.log(str.replace(/[-_ ]/g, ''));
   // Check for correct use of brackets [(*)]? one case only
-  // Is it numbers only? [0-9]
-  // Check for lengths 7, 10, 11
+  // Is it numbers only? [0-9] [^0-9] to check for non-numbers
+  // Check for lengths 7, 10, 11 /[0-9]{7,11}/
   // 11 - is first number 1?
   // Else return true 
   return true;
