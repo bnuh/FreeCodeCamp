@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Fill in the object constructor with the following methods below:
 // getFirstName()
 // getLastName()
