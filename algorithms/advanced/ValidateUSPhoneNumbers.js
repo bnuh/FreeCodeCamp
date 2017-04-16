@@ -14,15 +14,23 @@
 //Return true if the string is a valid US phone number; otherwise return false.
 
 function telephoneCheck(str) {
-  // Is first digit #, or parentheses?
-  // Remove dashes, underscores, spaces
-  console.log(str.replace(/[-_ ]/g, ''));
-  // Check for correct use of brackets [(*)]? one case only
-  // Is it numbers only? [0-9] [^0-9] to check for non-numbers
-  // Check for lengths 7, 10, 11 /[0-9]{7,11}/
-  // 11 - is first number 1?
-  // Else return true 
-  return true;
+	// Any extra characters?
+	if ((/[^-_ 0-9()]/g).test(str)) { return false }
+	// Parentheses
+	str = str.replace(/[-_ ]/g, '');
+	if (str.length > 13) { return false; }
+	else {
+		// if an 1 or 2 = open parentheses and 3 or 4 is closed (regex)
+			if (str[0] == '(') { 
+			str = str.replace(/[()]/, '');
+			console.log(str);
+		}
+	}
+	// Is it numbers [0-9] [^0-9] to check for non-numbers
+	// Check for lengths 7, 10, 11 /[0-9]{7,11}/
+	// 11 - is first number 1?
+	// Else return true 
+	return true;
 }
 
 telephoneCheck("555-555-5555");
