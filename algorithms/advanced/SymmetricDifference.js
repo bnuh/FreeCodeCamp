@@ -4,7 +4,14 @@
 
 
 function sym(args) {
-  return args;
+
+	var arr = [];
+	var newArr = [];
+	var count = 0;
+	for (var i = 0; i < arguments.length; i++){
+		arguments[i].forEach(function (elements){arr.push(elements);})
+	}
+	return arr;
 }
 
 
