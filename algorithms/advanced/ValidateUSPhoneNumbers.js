@@ -15,15 +15,33 @@
 
 function telephoneCheck(str) {
 	// Any extra characters?
-	if ((/[^-_ 0-9()]/g).test(str)) { return false }
-	// Parentheses
+	if ((/[^-_ 0-9()]/g).test(str) || (/[^0-9()]/).test(str[0])) { 
+		return false; }
+	// Parentheses and numbers only
 	str = str.replace(/[-_ ]/g, '');
 	if (str.length > 13) { return false; }
 	else {
 		// if an 1 or 2 = open parentheses and 3 or 4 is closed (regex)
-			if (str[0] == '(') { 
-			str = str.replace(/[()]/, '');
-			console.log(str);
+		if (str.length == 13 || str.length == 11) {
+			if (str[0] != 1) {
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+		if (str[0] == '(') { 
+			if (str[4] == ')') {
+				str = str.replace(/[()]/g, '');
+			}
+			else { return false; }
+		}
+		else if (str[1] == '(') {
+			if (str[5] == ')') {
+				str = str.replace(/[()]/g, '');
+				return true;
+			}
+			else { return false; }
 		}
 	}
 	// Is it numbers [0-9] [^0-9] to check for non-numbers
@@ -33,39 +51,37 @@ function telephoneCheck(str) {
 	return true;
 }
 
-telephoneCheck("555-555-5555");
+//telephoneCheck("555-555-5555");
 
-
-
-telephoneCheck("555-555-5555");
+//telephoneCheck("555-555-5555");
 // should return a boolean.
-telephoneCheck("1 555-555-5555");
+//telephoneCheck("1 555-555-5555");
 // should return true.
-telephoneCheck("1 (555) 555-5555");
+//telephoneCheck("1 (555) 555-5555");
 // should return true.
-telephoneCheck("5555555555");
+//telephoneCheck("5555555555");
 // should return true.
-telephoneCheck("555-555-5555");
+//telephoneCheck("555-555-5555");
 // should return true.
-telephoneCheck("(555)555-5555");
+// /telephoneCheck("(555)555-5555");
 // should return true.
-telephoneCheck("1(555)555-5555");
+//telephoneCheck("1(555)555-5555");
 // should return true.
 telephoneCheck("555-5555");
 // should return false.
-telephoneCheck("5555555");
+//telephoneCheck("5555555");
 // should return false.
 telephoneCheck("1 555)555-5555");
 // should return false.
-telephoneCheck("1 555 555 5555");
+//telephoneCheck("1 555 555 5555");
 // should return true.
-telephoneCheck("1 456 789 4444");
+//telephoneCheck("1 456 789 4444");
 // should return true.
-telephoneCheck("123**&!!asdf#");
+//telephoneCheck("123**&!!asdf#");
 // should return false.
-telephoneCheck("55555555");
+//telephoneCheck("55555555");
 // should return false.
-telephoneCheck("(6505552368)");
+//telephoneCheck("(6505552368)");
 // should return false
 telephoneCheck("2 (757) 622-7382");
 // should return false.
@@ -73,21 +89,21 @@ telephoneCheck("0 (757) 622-7382");
 // should return false.
 telephoneCheck("-1 (757) 622-7382");
 // should return false
-telephoneCheck("2 757 622-7382");
+//telephoneCheck("2 757 622-7382");
 // should return false.
-telephoneCheck("10 (757) 622-7382");
+//telephoneCheck("10 (757) 622-7382");
 // should return false.
-telephoneCheck("27576227382");
+//telephoneCheck("27576227382");
 // should return false.
-telephoneCheck("(275)76227382");
+//telephoneCheck("(275)76227382");
 // should return false.
-telephoneCheck("2(757)6227382");
+//telephoneCheck("2(757)6227382");
 // should return false.
-telephoneCheck("2(757)622-7382");
+//telephoneCheck("2(757)622-7382");
 // should return false.
-telephoneCheck("555)-555-5555");
+//telephoneCheck("555)-555-5555");
 // should return false.
-telephoneCheck("(555-555-5555");
+//telephoneCheck("(555-555-5555");
 // should return false.
-telephoneCheck("(555)5(55?)-5555");
+//telephoneCheck("(555)5(55?)-5555");
 // should return false.
