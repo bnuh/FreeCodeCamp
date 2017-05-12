@@ -25,10 +25,6 @@ function comp(arg1, arg2){
 	return arr
 }
 
-function isInArray(value, array) {
-  return array.indexOf(value) > -1;
-}
-
 // TESTS
 //console.log(sym([1, 2, 3], [5, 2, 1, 4]));
 //should return [3, 4, 5].
