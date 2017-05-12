@@ -4,35 +4,37 @@
 
 
 function sym(args) {
-
-	var arr = [];
-	var newArr = [];
-	var count = 0;
-	for (var i = 0; i < arguments.length; i++){
-		arguments[i].forEach(function (elements){arr.push(elements);})
+	for (var j = args.length; j > 0; j--){
+		comp(arguments[0], arguments[1]);
 	}
-	return arr;
+	
 }
 
+function comp(arg1, arg2){
+	var max = arg1.length > arg2.length? arg1.length : arg2.length;
+	for (var i = 0; i < max; i++){
+		console.log(i);
+	}
+}
 
 // TESTS
-sym([1, 2, 3], [5, 2, 1, 4]);
+//console.log(sym([1, 2, 3], [5, 2, 1, 4]));
 //should return [3, 4, 5].
-sym([1, 2, 3], [5, 2, 1, 4]); 
+//console.log(sym([1, 2, 3], [5, 2, 1, 4])); 
 //should contain only three elements.
-sym([1, 2, 5], [2, 3, 5], [3, 4, 5]);
+console.log(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]));
 //should return [1, 4, 5]
-sym([1, 2, 5], [2, 3, 5], [3, 4, 5]);
+//sym([1, 2, 5], [2, 3, 5], [3, 4, 5]);
 //should contain only three elements.
-sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]);
+//sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]);
 //should return [1, 4, 5].
-sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]);
+//sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]);
 //should contain only three elements.
-sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]);
+//sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]);
 //should return [2, 3, 4, 6, 7].
-sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]);
+//sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]);
 //should contain only five elements.
-sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]);
+//sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]);
 //should return [1, 2, 4, 5, 6, 7, 8, 9].
-sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]);
+//sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]);
 //should contain only eight elements.
