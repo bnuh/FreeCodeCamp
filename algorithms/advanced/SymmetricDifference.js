@@ -5,16 +5,24 @@
 
 function sym(args) {
 	for (var j = args.length; j > 0; j--){
+		// comp function should return new array
 		comp(arguments[0], arguments[1]);
 	}
 	
 }
 
 function comp(arg1, arg2){
-	var max = arg1.length > arg2.length? arg1.length : arg2.length;
-	for (var i = 0; i < max; i++){
-		console.log(i);
+	var arr = [];
+	// var max = arg1.length > arg2.length? arg1.length : arg2.length;
+	for (var i = 0; i < arg1.length; i++){
+		if (arg2.indexOf(arg1[i]) == -1) arr.push(arg1[i]);
 	}
+	console.log(arr);
+	return arr
+}
+
+function isInArray(value, array) {
+  return array.indexOf(value) > -1;
 }
 
 // TESTS
