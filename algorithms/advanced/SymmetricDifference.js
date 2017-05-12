@@ -4,20 +4,20 @@
 
 
 function sym(args) {
-	for (var j = args.length; j > 0; j--){
+	var fin = [args[0]];
+	for (var j = 1; j < args.length-1; j++){
 		// comp function should return new array
-		comp(arguments[0], arguments[1]);
+		fin = comp(fin, arguments[j]);
 	}
 	
 }
 
 function comp(arg1, arg2){
 	var arr = [];
-	// var max = arg1.length > arg2.length? arg1.length : arg2.length;
+	// need to account for multiple values in one array
 	for (var i = 0; i < arg1.length; i++){
 		if (arg2.indexOf(arg1[i]) == -1) arr.push(arg1[i]);
 	}
-	console.log(arr);
 	return arr
 }
 
