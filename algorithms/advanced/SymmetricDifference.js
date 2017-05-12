@@ -4,19 +4,23 @@
 
 
 function sym(args) {
-	var fin = [args[0]];
-	for (var j = 1; j < args.length-1; j++){
-		// comp function should return new array
-		fin = comp(fin, arguments[j]);
+	var fin = [];
+	for (var j = 0; j < args.length-1; j++){
+		var temp = comp(arguments[j], arguments[j+1]);
+		fin.concat(temp);
 	}
-	
+	console.log(fin);
 }
 
 function comp(arg1, arg2){
 	var arr = [];
 	// need to account for multiple values in one array
 	for (var i = 0; i < arg1.length; i++){
-		if (arg2.indexOf(arg1[i]) == -1) arr.push(arg1[i]);
+		if (arg2.indexOf(arg1[i]) == -1) {
+			console.log(arg2.indexOf(arg1[i]));
+			arr.push(arg1[i]);
+		}
+		console.log(arr);
 	}
 	return arr
 }
