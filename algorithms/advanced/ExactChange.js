@@ -1,49 +1,30 @@
-
 function checkCashRegister(price, cash, cid) {
-  var balance = cash - price;
-  var sum = 0;
   var change = [];
-  for (var i = 0; i < cid.length; i++){
-    sum += cid[i][1];
-  }
-  if (sum < balance || (sum%balance) !== 0){
-    return "Insufficient Funds";
-  }
-  else if (sum == balance){
+  var list = [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
+  var subtotal = (cash-price)*100;
+  var currency = [1,5,10,25,100,500,1000,2000,10000];
+  var total = cid.map(function(v) {return v[1]; }).reduce(function(a,b) {return a + b;});
+  if (total*100 == subtotal){
     return "Closed";
   }
-  while (balance > 0 && sum > 0){
-    var tmp = 0;
-    if (floor(balance/100) > 0){
-      tmp = 0;
-      while(balance > 100 && cid[9][1] !== 0){
-        balance -= 100;
-        tmp += 1;
-      }
-      change.push(["ONE HUNDRED", (100.00 * tmp)]);
-    }
-    if (floor(balance/50) > 0){
-      tmp = 0;
-      while(balance > 50 && cid[8][1] !== 0){
-        balance -= 50;
-        tmp += 1;
-      }
-      change.push(["FIFTY", (50.00 * tmp)]);
-    } 
+  else if (total*100 < subtotal){
+    return "Insufficient Funds";
   }
-  // Here is your change, ma'am.
+  else {
+    total *= 100;
+    for (var i = cid.length-1; i >= 0; i--){
+      if (cid[i][1] > 0 && subtotal%currency[i] < subtotal){
+        temp = [];
+        temp = [list[i][0],0];
+        while (cid[i][1] > 0 && subtotal%currency[i] < subtotal) {
+          subtotal -= currency[i];
+          total -= currency[i];
+          temp[1] += currency[i]/100;
+        }
+        change.push(temp);
+      }
+      // CID denomination is too high to make change?
+    }
+  }
   return change;
 }
-
-// Example cash-in-drawer array:
-// [["PENNY", 1.01],
-// ["NICKEL", 2.05],
-// ["DIME", 3.10],
-// ["QUARTER", 4.25],
-// ["ONE", 90.00],
-// ["FIVE", 55.00],
-// ["TEN", 20.00],
-// ["TWENTY", 60.00],
-// ["ONE HUNDRED", 100.00]]
-
-checkCashRegister(19.50, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]);
