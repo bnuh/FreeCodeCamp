@@ -4,14 +4,17 @@
 function permAlone(str) {
     str = str.split("").sort();
     count = 1;
+    unique = 1;
     repeats = [];
-    for (var i = 0; i < str.length; i++){
+    for (var i = 0; i < str.length-1; i++){
         if (str[i] == str[i+1]) { count++; }
+        else if (str[i] != str[i+1]) { unique++; }
         else { 
             if (count > 1) repeats.push(count);
             count = 1;
         }
     }
+    if (unique == 1) { return 0 }
     var total = fac(str.length);
     var invalid = fac(str.length-1);
     for (var i = 0; i < repeats.length; i++){
@@ -36,7 +39,7 @@ function fac(num){
 
 //console.log(permAlone("aab"));
 // should return 2.
-//console.log(permAlone("aaa"));
+// console.log(permAlone("aaa"));
 // should return 0.
 //console.log(permAlone("aabb"));
 // should return 8.
@@ -44,11 +47,11 @@ function fac(num){
 // should return 3600.
 //console.log(permAlone("abfdefa"));
 // should return 2640.
-//console.log(permAlone("zzzzzzzz"));
+// console.log(permAlone("zzzzzzzz"));
 // should return 0.
 //console.log(permAlone("a"));
 // should return 1.
-//console.log(permAlone("aaab"));
+console.log(permAlone("aaab"));
 // should return 0.
-//console.log(permAlone("aaabb"));
+console.log(permAlone("aaabb"));
 // should return 12.
