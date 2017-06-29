@@ -6,14 +6,15 @@ function permAlone(str) {
     count = 1;
     unique = 1;
     repeats = [];
-    for (var i = 0; i < str.length-1; i++){
+    for (var i = 0; i < str.length; i++){
         if (str[i] == str[i+1]) { count++; }
-        else if (str[i] != str[i+1]) { unique++; }
-        else { 
+        else if (str[i] != str[i+1]) { 
+            unique++;
             if (count > 1) repeats.push(count);
             count = 1;
         }
     }
+    
     if (unique == 1) { return 0 }
     var total = fac(str.length);
     var invalid = fac(str.length-1);
