@@ -5,6 +5,7 @@ function permAlone(str) {
     str = str.split("").sort();
     count = 1;
     unique = 1;
+    values = Array.from(new Set(str));
     repeats = [];
     for (var i = 0; i < str.length; i++){
         if (str[i] == str[i+1]) { count++; }
@@ -14,21 +15,33 @@ function permAlone(str) {
             count = 1;
         }
     }
-    
+    // filter for unique values in str
     if (unique == 1) { return 0 }
     var total = fac(str.length);
-    var invalid = fac(str.length-1);
+    var invalid = fac(str.length-1);    // True?
     for (var i = 0; i < repeats.length; i++){
         invalid *= fac(repeats[i]);
     }
     if (repeats.length > 1){
-        var overlaps = fac(str.length - repeats.length)
+        var overlaps = fac(str.length - repeats.length);
         for (var i = 0; i < repeats.length; i++){
             overlaps *= fac(repeats[i]);
         }
     }
-    else { overlaps = 0 }
 
+    for (var i = 0; i < repeats.length; i++){
+        if (repeats[i] > 2){
+            overlaps += fac(repeats[i]);
+        }
+    }
+    for (var i = 0; i < repeats.length; i++){
+        if (repeats[i] > 2){
+            repeats[i] -= 1;
+            overlaps *= fac(repeats[i]); 
+        }
+    }
+    if (values.length > 1) { overlaps = 0 }
+    
     return total - invalid + overlaps;
 }
 
@@ -42,17 +55,17 @@ function fac(num){
 // should return 2.
 // console.log(permAlone("aaa"));
 // should return 0.
-//console.log(permAlone("aabb"));
+console.log(permAlone("aabb"));
 // should return 8.
-//console.log(permAlone("abcdefa"));
+console.log(permAlone("abcdefa"));
 // should return 3600.
-//console.log(permAlone("abfdefa"));
+console.log(permAlone("abfdefa"));
 // should return 2640.
 // console.log(permAlone("zzzzzzzz"));
 // should return 0.
 //console.log(permAlone("a"));
 // should return 1.
-console.log(permAlone("aaab"));
+console.log(permAlone("aaab"));     //repeats.length = 1
 // should return 0.
-console.log(permAlone("aaabb"));
+//console.log(permAlone("aaabb"));
 // should return 12.
