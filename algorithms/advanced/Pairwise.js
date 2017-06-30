@@ -11,16 +11,35 @@
 // 3 + 3 = 6 → Return 6
 
 function pairwise(arr, arg) {
-  return arg;
+    // ForEach sum arr elements with each other element → sum = arg? push to arr
+    // If true, remove both from array
+    // Else return 0
+    var x = [];
+    for (var i = 0; i < arr.length; i++){
+        for (var j = 0; j < arr.length; j++){
+            if (i != j) {
+                if (arr[i] + arr[j] == arg) {
+                    x.push((i+j));
+                    delete arr[j];
+                    delete arr[i];
+                }
+            }
+        }
+    }
+    var sum = 0;
+    for (var i = 0; i < x.length; i++){
+        sum += x[i];
+    }
+    return sum;
 }
 
-pairwise([1, 4, 2, 3, 0, 5], 7);
+//console.log(pairwise([1, 4, 2, 3, 0, 5], 7));
 // should return 11.
-pairwise([1, 3, 2, 4], 4);
+//console.log(pairwise([1, 3, 2, 4], 4));
 // should return 1.
-pairwise([1, 1, 1], 2);
+console.log(pairwise([1, 1, 1], 2));
 // should return 1.
-pairwise([0, 0, 0, 0, 1, 1], 1);
+console.log(pairwise([0, 0, 0, 0, 1, 1], 1));
 // should return 10.
-pairwise([], 100);
+//console.log(pairwise([], 100));
 // should return 0.
