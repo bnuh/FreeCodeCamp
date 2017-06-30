@@ -16,8 +16,14 @@ function permAlone(str) {
             count = 1;
         }
     }
-
     var total = fac(str.length);
+    var overlaps = 0;
+    if (repeats.length != 1){
+        var overlaps = fac(values.length);
+        for (var i = 0; i < repeats.length; i++){
+            overlaps *= fac(repeats[i]);
+        }
+    }
     var invalid = 0;
     for (var i = 0; i < repeats.length; i++){
         while (repeats[i] >= 2) {
@@ -25,13 +31,6 @@ function permAlone(str) {
             repeats[i]--;
         }
     }
-    var overlaps = fac(values.length);
-    if (repeats.length > 1) {
-        for (var i = 0; i < repeats.length; i++){
-            overlaps *= fac(repeats[i]);
-        }
-    }
-    if (repeats.length == 1) { overlaps = 0 }
     return total - invalid + overlaps;
 }
 
