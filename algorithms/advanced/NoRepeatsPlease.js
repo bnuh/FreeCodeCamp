@@ -54,7 +54,7 @@ console.log(permAlone("zzzzzzzz"));
 // should return 0.
 console.log(permAlone("a"));
 // should return 1.
-console.log(permAlone("aaab"));     //repeats.length = 1
+console.log(permAlone("aaab"));
 // should return 0.
 console.log(permAlone("aaabb"));
 // should return 12.
