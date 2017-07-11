@@ -1,3 +1,5 @@
+// Filter list of files in given folder
+
 var fs = require('fs');
  fs.readdir(process.argv[2], function callback (err, list){
      if (err){
