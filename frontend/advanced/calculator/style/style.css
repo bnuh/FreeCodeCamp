@@ -4,25 +4,31 @@ body {
 
 .calc {
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     display: block;
     width: 400px;
     padding: 25px;
+    padding-bottom: 90px;
     background: rgb(238, 238, 238);
-    background: -moz-linear-gradient(top, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%);
-    background: -webkit-linear-gradient(top, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%);
-    background: linear-gradient(to bottom, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%);
+    background: -moz-linear-gradient(top, rgb(201, 195, 195) 0%, rgb(158, 157, 157) 100%);
+    background: -webkit-linear-gradient(top, rgb(201, 195, 195) 0%, rgb(158, 157, 157) 100%);
+    background: linear-gradient(to bottom, rgb(201, 195, 195) 0%, rgb(158, 157, 157) 100%);
+    background-image: linear-gradient(top, rgb(201, 195, 195) 100%, rgb(158, 157, 157) 100%);
+    background-image: -o-linear-gradient(top, rgb(201, 195, 195) 100%, rgb(158, 157, 157) 100%);
+    background-image: -moz-linear-gradient(top, rgb(201, 195, 195) 100%, rgb(158, 157, 157) 100%);
+    background-image: -webkit-linear-gradient(top, rgb(201, 195, 195) 100%, rgb(158, 157, 157) 100%);
+    background-image: -ms-linear-gradient(top, rgb(201, 195, 195) 100%, rgb(158, 157, 157) 100%);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(158, 157, 157)), color-stop(1, rgb(201, 195, 195)));
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+    border: 1px solid rgba(56, 56, 56, 0.247);
     border-radius: 10px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0px 6px 6px rgba(119, 119, 119, 1), 3px 15px 15px rgba(0, 0, 0, .4), inset 10px 8px 8px rgba(255, 255, 255, .3), inset -10px -10px 6px rgba(255, 255, 255, .5);
-    -moz-box-shadow: 0px 6px 6px rgba(119, 119, 119, 1), 3px 15px 15px rgba(0, 0, 0, .4), inset 10px 8px 8px rgba(255, 255, 255, .3), inset -10px -10px 6px rgba(255, 255, 255, .5);
-    box-shadow: 0px 6px 6px rgba(119, 119, 119, 1), 3px 15px 15px rgba(0, 0, 0, .4), inset 10px 8px 8px rgba(255, 255, 255, .3), inset -10px -10px 6px rgba(255, 255, 255, .5);
+    -webkit-box-shadow: 0px 6px 0px rgb(82, 82, 82), 0px 4px 5px rgb(82, 82, 82), inset 2px 0px 0 rgba(255, 255, 255, 0.5), inset 0px 2px 0 rgba(255, 255, 255, 0.3), inset 0px -2px 0 rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0px 6px 0px rgb(82, 82, 82), 0px 4px 5px rgb(82, 82, 82), inset 2px 0px 0 rgba(255, 255, 255, 0.5), inset 0px 2px 0 rgba(255, 255, 255, 0.3), inset 0px -2px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 6px 0px rgb(82, 82, 82), 0px 4px 5px rgb(82, 82, 82), inset 2px 0px 0 rgba(255, 255, 255, 0.5), inset 0px 2px 0 rgba(255, 255, 255, 0.3), inset 0px -2px 0 rgba(255, 255, 255, 0.3);
+    ;
 }
 
 .wrapper {
@@ -39,15 +45,13 @@ body {
 #screen {
     grid-column-start: 1;
     grid-column-end: 5;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    font-size: 1.5em;
+    font-family: 'VT323';
+    text-align: right;
     margin: 5px;
-    padding: 5px;
+    padding: 10px 20px 10px 20px;
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 4em;
     border: 1px solid black;
     border-radius: 5px;
     background: rgb(125, 126, 125);
@@ -55,6 +59,9 @@ body {
     background: -webkit-linear-gradient(top, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 100%);
     background: linear-gradient(to bottom, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e', GradientType=0);
+    -webkit-box-shadow: inset 0px 2px 2px rgb(82, 82, 82);
+    -moz-box-shadow: inset 0px 2px 2px rgb(82, 82, 82);
+    box-shadow: inset 0px 2px 2px rgb(82, 82, 82);
 }
 
 #screen:hover {
@@ -176,33 +183,3 @@ body {
     -moz-transform: translate(0, 4px);
     transform: translate(0, 4px);
 }
-
-#one {}
-
-#two {}
-
-#three {}
-
-#four {}
-
-#five {}
-
-#six {}
-
-#seven {}
-
-#eight {}
-
-#nine {}
-
-#zero {}
-
-#plus {}
-
-#minus {}
-
-#mult {}
-
-#divide {}
-
-#equal {}
