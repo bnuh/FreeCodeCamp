@@ -12,25 +12,24 @@
 <body>
     <div class="calc">
         <div class="wrapper">
-            <div id="screen"></div>
+            <div id="screen" onclick="clearScreen()">0</div>
             <div class="press" id="one" onclick="getValue(id)">1</div>
             <div class="press" id="two" onclick="getValue(id)">2</div>
             <div class="press" id="three" onclick="getValue(id);">3</div>
-            <div class="operation" id="plus" onclick="compute(id);">+</div>
+            <div class="operation" id="plus" onclick="calc(id);">+</div>
             <div class="press" id="four" onclick="getValue(id);">4</div>
             <div class="press" id="five" onclick="getValue(id);">5</div>
             <div class="press" id="six" onclick="getValue(id);">6</div>
-            <div class="operation" id="minus" onclick="compute(id)">-</div>
+            <div class="operation" id="minus" onclick="calc(id)">-</div>
             <div class="press" id="seven" onclick="getValue(id);">7</div>
             <div class="press" id="eight" onclick="getValue(id);">8</div>
             <div class="press" id="nine" onclick="getValue(id);">9</div>
-            <div class="operation" id="mult" onclick="compute(id);">*</div>
+            <div class="operation" id="mult" onclick="calc(id);">*</div>
             <div class="press" id="zero" onclick="getValue(id);">0</div>
-            <div class="operation" id="equal" onclick="solve(id);">=</div>
-            <div class="operation" id="divide" onclick="compute();">/</div>
+            <div class="operation" id="equal" onclick="calc(id);">=</div>
+            <div class="operation" id="divide" onclick="calc(id);">/</div>
         </div>
     </div>
-    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
